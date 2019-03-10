@@ -18,7 +18,9 @@
     ```
 
 3. Create **Virtual Host** [diego-cortes.jobsitychallenge.com](http://diego-cortes.jobsitychallenge.com) 
+    
     Add the following code in your default configuration file in */etc/apache2/sites-available* or create a new configuration file and enable it.
+    
     Restart apache web server to take effect the changes.  
     ```xml
         <VirtualHost *:80>
