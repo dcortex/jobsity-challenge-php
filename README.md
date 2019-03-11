@@ -4,9 +4,11 @@
 
 **Framework:** Laravel 5.8
 
+**System:** Ubuntu 18.04 | Apache 2.4.29 | PHP 7.2.15 | MySQL 5.7.25
+
 **Description:** This project is designed to test the knowledge of web technologies and assess the ability to create robust PHP web applications with attention to software architecture and security.
 
-## Instalation
+## Installation Instructions
 1. Create the project directory
     ```sh
         $ mkdir -p /var/www/jobsitychallenge/diego_cortes
@@ -46,7 +48,7 @@
         $ composer install
     ```
 
-5. Create a new database in MySQL, set the environment variables in *./.env* and run the following command to migrate the db
+5. Create a new database in MySQL (Recommended MySQL v5.7.7 or higher), set the environment variables in *./.env* and run the following command to migrate the DB
     ```sh
         $ php artisan migrate
     ```

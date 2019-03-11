@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Diego Cortés - Jobsity Challenge') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Diego Cortés - Jobsity Challenge') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,17 +35,17 @@
                     @auth
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ url('/') }}">Public Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('home') }}">Dashboard Home</a>
+                                <a class="nav-link" href="{{ route('site.profile', ['id' => Auth::id()]) }}">My Public Profile</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Entries</a>
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Admin Entries</a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('entries.index') }}">
-                                        {{ __('List Entries') }}
+                                        {{ __('Entries List') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('entries.create') }}">
                                         {{ __('Create New Entry') }}

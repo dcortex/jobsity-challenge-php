@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'SiteController@index')->name('home');
+Route::get('/profile/{id}', 'SiteController@profile')->name('site.profile');
 
 Route::resource('entries', 'EntryController');
 

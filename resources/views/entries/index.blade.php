@@ -21,7 +21,7 @@
                 </div><br />
             @endif
             <div class="card">
-                <div class="card-header">{{ __('Edit Entry') }}</div>
+                <div class="card-header">{{ __('Entries List') }} <a class="btn btn-secondary float-right btn-sm" href="{{ route('entries.create') }}">{{ __('Create New Entry') }}</a></div>
 
                 <div class="card-body">
                     <table class="table">
