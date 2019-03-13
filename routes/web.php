@@ -14,7 +14,9 @@
 Auth::routes();
 
 Route::get('/', 'SiteController@index')->name('home');
-Route::get('/profile/{id}', 'SiteController@profile')->name('site.profile');
+Route::get('/authors/{id}', 'SiteController@author')->name('site.author');
+Route::get('/authors/tweets/{userId}', 'SiteController@tweets')->name('site.author.tweets');
+Route::post('/authors/tweet/{tweetId}', 'SiteController@tweetUpdate')->name('site.author.tweetUpdate');
 
 Route::resource('entries', 'EntryController');
 

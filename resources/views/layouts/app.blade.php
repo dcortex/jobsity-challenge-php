@@ -9,6 +9,13 @@
 
     <title>{{ config('app.name', 'Diego Cortés - Jobsity Challenge') }}</title>
 
+    <!-- Data Scripts -->
+    <script>
+        APP = {
+            baseUrl: '{{ url('/') }}',
+        };
+    </script>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -38,7 +45,7 @@
                                 <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('site.profile', ['id' => Auth::id()]) }}">My Public Profile</a>
+                                <a class="nav-link" href="{{ route('site.author', ['id' => Auth::id()]) }}">My Public Profile</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Admin Entries</a>

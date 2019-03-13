@@ -6,6 +6,8 @@
 
 **System:** Ubuntu 18.04 | Apache 2.4.29 | PHP 7.2.15 | MySQL 5.7.25
 
+**Dependencies:** Laravel 5.8 Dependencies, cURL PHP extension
+
 **Description:** This project is designed to test the knowledge of web technologies and assess the ability to create robust PHP web applications with attention to software architecture and security.
 
 ## Installation Instructions
@@ -53,4 +55,12 @@
         $ php artisan migrate
     ```
 
-6. Open [diego-cortes.jobsitychallenge.com](http://diego-cortes.jobsitychallenge.com) in a modern browser ;)
+6. Create a new Twitter App and set the variables below in *./.env* file. [developer.twitter.com/en/apps](https://developer.twitter.com/en/apps) 
+    ```
+        TWITTER_CONSUMER_KEY= 
+        TWITTER_CONSUMER_SECRET=
+        TWITTER_ACCESS_TOKEN=
+        TWITTER_ACCESS_TOKEN_SECRET=
+    ```
+
+7. Open [diego-cortes.jobsitychallenge.com](http://diego-cortes.jobsitychallenge.com) in a modern browser ;)

@@ -44,4 +44,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Entry');
     }
+
+    /**
+     * Get the hidden tweets for a user.
+     */
+    public function hiddenTweets()
+    {
+        return $this->hasMany('App\HiddenTweet');
+    }
 }
