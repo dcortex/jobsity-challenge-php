@@ -40,11 +40,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    @auth
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                             </li>
+                            @auth
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ route('site.author', ['id' => Auth::id()]) }}">My Public Profile</a>
                             </li>
@@ -60,8 +60,8 @@
                                     </a>
                                 </div>
                             </li>
+                            @endauth
                         </ul>
-                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
