@@ -1,0 +1,36 @@
+.blog-entry {
+    margin-bottom: 20px;
+    // &__options {
+        
+    // }
+    // &__body {
+    //     &__title {
+
+    //     }
+    //     &__content {
+            
+    //     }
+    //     &__footer {
+
+    //     }
+    // }
+    .botton {
+        @include buttons();
+    }
+}
+
+.tweet {
+    margin-bottom: 10px;
+    // &__header {
+
+    // }
+    // &__content {
+        
+    // }
+    &__footer {
+        height: 32px;
+        font-size: 12px;
+        padding: 7px 15px;
+        text-align: right;
+    }
+}

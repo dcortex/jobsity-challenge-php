@@ -55,7 +55,7 @@
                     componentData.pagination.total = componentData.tweets.length;
                 })
                 .catch(function (error) {
-                    alert(`Error retrieving data from Twitter, please refresh the page.\n${error}`);
+                    componentData.errors.push( {code: 0, message: error} );
                     console.log(error);
                 })
                 .then(function () {

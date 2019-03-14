@@ -13,6 +13,7 @@
     <script>
         APP = {
             baseUrl: '{{ url('/') }}',
+            apiUrl: '{{ url('/') }}/api',
         };
     </script>
 

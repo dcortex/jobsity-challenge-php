@@ -32,7 +32,7 @@ class SiteController extends Controller
     public function author($id)
     {
         $user = User::findOrFail($id);
-        $entries = $user->entries()->paginate(3);
+        $entries = $user->entries()->orderBy('created_at', 'desc')->paginate(3);
 
         return view('site.author', compact('user', 'entries'));
     }

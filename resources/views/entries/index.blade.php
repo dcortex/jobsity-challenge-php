@@ -24,36 +24,34 @@
                 <div class="card-header">{{ __('Entries List') }} <a class="btn btn-secondary float-right btn-sm" href="{{ route('entries.create') }}">{{ __('Create New Entry') }}</a></div>
 
                 <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Last Updated Date</th>
-                                <th scope="col">Creation Date</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($entries as $entry)
-                            <tr>
-                                <td scope="row">{{$entry->id}}</td>
-                                <td>{{$entry->title}}</td>
-                                <td>{{$entry->updated_at->toDayDateTimeString()}}</td>
-                                <td>{{$entry->created_at->toFormattedDateString()}}</td>
-                                <td>
-                                    <a href="{{ route('entries.show',$entry->id) }}" class="btn btn-primary">View</a>
-                                    <a href="{{ route('entries.edit',$entry->id) }}" class="btn btn-secondary">Edit</a>
-                                    <form action="{{ route('entries.destroy', $entry->id) }}" method="post" style="display: inline-block;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-danger" type="submit">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-container">
+                        <div class="table-container__head">
+                            <div>#</div>
+                            <div>Title</div>
+                            <div>Last Updated Date</div>
+                            <div>Creation Date</div>
+                            <div>Action</div>
+                        </div>
+                        <div class="table-container__content">
+                            @foreach($entries as $entry)
+                                <div class="table-container__content__row">
+                                    <div>{{$entry->id}}</div>
+                                    <div>{{$entry->title}}</div>
+                                    <div>{{$entry->updated_at->toDayDateTimeString()}}</div>
+                                    <div>{{$entry->created_at->toFormattedDateString()}}</div>
+                                    <div>
+                                        <a href="{{ route('entries.show',$entry->id) }}" class="btn btn-primary">View</a>
+                                        <a href="{{ route('entries.edit',$entry->id) }}" class="btn btn-secondary">Edit</a>
+                                        <form action="{{ route('entries.destroy', $entry->id) }}" method="post" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?');">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

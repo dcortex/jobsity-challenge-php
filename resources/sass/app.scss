@@ -4,11 +4,14 @@
 
 // Variables
 @import 'variables';
+@import 'mixin';
+@import 'site';
+@import 'admin';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: rgb(216, 216, 216);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }

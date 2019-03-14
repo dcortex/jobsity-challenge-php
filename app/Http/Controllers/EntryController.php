@@ -21,7 +21,7 @@ class EntryController extends Controller
      */
     public function index()
     {
-        $entries = Auth::user()->entries;
+        $entries = Auth::user()->entries()->orderBy('created_at', 'desc')->get();
         return view('entries.index', compact('entries'));
     }
 

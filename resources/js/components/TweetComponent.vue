@@ -2,16 +2,16 @@
     <div :id="tweet.id" class="row justify-content-left tweet">
         <div class="col-md-12">
             <div class="card">
-                <div v-if="isOwner" class="card-header">
+                <div v-if="isOwner" class="card-header tweet__header">
                     <button v-show="!tweet.hidden" @click="hideTweet" type="button" class="btn btn-success btn-sm float-right">Hide</button>
                     <button v-show="tweet.hidden" @click="showTweet" type="button" class="btn btn-danger btn-sm float-right">Unhide</button>
                 </div>
                 <div class="card-body tweet__content">
                     {{tweet.text}}
                 </div>
-                <!-- <div class="card-footer text-muted tweet__footer">
-                    {{tweet.created_at}}
-                </div> -->
+                <div class="text-muted tweet__footer">
+                    {{formatDateTime}}
+                </div>
             </div>
         </div>
     </div>
@@ -20,6 +20,12 @@
 <script>
     export default {
         props: ['tweet', 'isOwner'],
+        computed: {
+            formatDateTime: function(){
+                let tweetDate = new Date(this.tweet.created_at);
+                return `${tweetDate.getMonth()+1}/${tweetDate.getDay()}/${tweetDate.getFullYear()} ${tweetDate.getHours()}:${tweetDate.getMinutes()}`;
+            },
+        },
         methods: {
             hideTweet: function (event) {
                 this.saveTweetVisibily(true);
