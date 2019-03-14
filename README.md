@@ -63,4 +63,9 @@
         TWITTER_ACCESS_TOKEN_SECRET=
     ```
 
-7. Open [diego-cortes.jobsitychallenge.com](http://diego-cortes.jobsitychallenge.com) in a modern browser ;)
+7. Run Unit Tests, execute the command below in the project root
+    ```sh
+        $ ./phpunit
+    ```
+
+8. Open [diego-cortes.jobsitychallenge.com](http://diego-cortes.jobsitychallenge.com) in a modern browser ;)
